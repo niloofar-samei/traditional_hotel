@@ -34,6 +34,10 @@
 			<div class="form-group" style="padding: 10px;">
 				{{ Form::text('lastname', null, ['placeholder'=>'Last Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
 			</div>
+
+			<div class="form-group" style="padding: 10px;">
+				{{ Form::text('idcode', null, ['placeholder'=>'ID Code', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+			</div>
 			
 			<div class="form-group" style="padding: 10px;">
 				<label style="padding-left: 15px;">{!! Form::radio('room', 'Single bed', true, ['id'=>'1']) !!} Single bed</label>
