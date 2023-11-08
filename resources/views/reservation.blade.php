@@ -20,25 +20,25 @@
 </head>
 <body>
 
-	<div class="container text-center" style="border: 1px solid red; margin-top: 50px">
-		<div style="margin: auto; border: 1px solid green; width: 600px; background-image: linear-gradient(to right, #f46b45, #eea849);">
+	<div class="container text-center" style="margin-top: 50px">
+		<div style="margin: auto; width: 600px; background-image: linear-gradient(to right, #f46b45, #eea849); padding-top: 10px; padding-bottom: 10px;">
 			{!! Form::open(['route'=>'hotel.store', 'method'=>'post']) !!}
 
-			<div class="form-group" style="padding: 5px; border: 1px solid yellow">
+			<div class="form-group" style="padding: 5px;">
 				{{ Form::text('firstname', null, ['placeholder'=>'First Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
 			</div>
 
-			<div class="form-group" style="padding: 5px; border: 1px solid yellow">
+			<div class="form-group" style="padding: 5px;">
 				{{ Form::text('lastname', null, ['placeholder'=>'Last Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
 			</div>
 			
-			<div class="form-group" style="padding: 5px; border: 1px solid yellow;">
+			<div class="form-group" style="padding: 5px;">
 				<label style="padding-left: 15px;">{!! Form::radio('room', 'Single bed', true, ['id'=>'1']) !!} Single bed</label>
 				<label style="padding-left: 15px;">{!! Form::radio('room', 'Twin bed', true, ['id'=>'2']) !!} Twin bed</label>
 				<label style="padding-left: 15px;">{!! Form::radio('room', 'Three beds', true, ['id'=>'3']) !!} Three beds</label>
 			</div>
 
-			<div class="form-group" style="padding: 5px; border: 1px solid yellow;">
+			<div class="form-group" style="padding: 5px">
 				{!! Form::submit('Reserv My Room', ['class'=>'form-control btn btn-success btn-block', 'style'=>'width: 200px; height: 50px']) !!}
 			</div>
 
