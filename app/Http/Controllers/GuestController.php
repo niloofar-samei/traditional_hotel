@@ -62,4 +62,8 @@ class GuestController extends Controller
     {
         //
     }
+
+    public function reservation() {
+        return view('reservation');
+    }
 }
