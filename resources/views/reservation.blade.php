@@ -21,7 +21,10 @@
 <body>
 
 	<div class="container text-center" style="margin-top: 50px">
-		<div style="margin: auto; width: 600px; background-image: linear-gradient(to right, #f46b45, #eea849); padding-top: 10px; padding-bottom: 10px;">
+		<div style="margin: auto; width: 600px; background-image: linear-gradient(to right, #f46b45, #eea849); padding-top: 50px; padding-bottom: 20px; border-radius: 20px;">
+
+			<h3>Please reserve your room!</h3>
+
 			{!! Form::open(['route'=>'hotel.store', 'method'=>'post']) !!}
 
 			<div class="form-group" style="padding: 5px;">
