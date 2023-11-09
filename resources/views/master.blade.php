@@ -9,21 +9,22 @@
 <body style="background-image: url({{asset('dist/img/index.jpg')}}); background-size: 100% auto;">
 
 	{{-- navbar --}}
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  <a class="navbar-brand" href="#">Navbar</a>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-left: 30px">
+
+	  <a class="navbar-brand" href="#">TRADITONAL HOTEL</a>
+
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
-	  <div class="collapse navbar-collapse" id="navbarNav">
+
+	  <div class="collapse navbar-collapse" id="navbarNav" style="padding-left: 50px;">
 	    <ul class="navbar-nav">
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Features</a>
+	        <a class="nav-link" href="#">RESERVATION</a>
 	      </li>
 	    </ul>
 	  </div>
+
 	</nav>
 
 	@yield('content')
