@@ -22,8 +22,8 @@
 <script>
 
 $(document).ready(function(){
-  $("h4").click(function(){
-    $("#hi").toggle();
+  $("#q").click(function(){
+    $("#more-form").toggle();
   });
 });
 </script>
@@ -53,42 +53,62 @@ $(document).ready(function(){
 	<div class="container text-center" style="margin-top: 50px">
 		<div style="margin: auto; width: 600px; background-image: linear-gradient(to right, #f46b45, #eea849); padding-top: 50px; padding-bottom: 20px; border-radius: 20px;">
 
-			<h3>Please reserve your room!</h3>
-			<h4>More Guests?</h4>
+			<h3 style="border: 1px solid black">Please reserve your room!</h3>
+			<p id="q" style="border: 1px solid black">More Guests?</p>
 
-			{!! Form::open(['route'=>'hotel.store', 'method'=>'post']) !!}
+			<div style="border: 1px solid green" id="single-form">
+				{!! Form::open(['route'=>'hotel.store', 'method'=>'post']) !!}
 
-			<div class="form-group" style="padding: 10px;">
-				{{ Form::text('othername', null, ['placeholder'=>'Other Name', 'id'=>'hi', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
-			</div>
+				<div class="form-group" style="padding: 10px;">
+					{{ Form::text('firstname', null, ['placeholder'=>'First Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+				</div>
 
-			<div class="form-group" style="padding: 10px;">
-				{{ Form::text('firstname', null, ['placeholder'=>'First Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
-			</div>
+				<div class="form-group" style="padding: 10px;">
+					{{ Form::text('lastname', null, ['placeholder'=>'Last Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+				</div>
 
-			<div class="form-group" style="padding: 10px;">
-				{{ Form::text('lastname', null, ['placeholder'=>'Last Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
-			</div>
+				<div class="form-group" style="padding: 10px;">
+					{{ Form::text('idcode', null, ['placeholder'=>'ID Code', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+				</div>
 
-			<div class="form-group" style="padding: 10px;">
-				{{ Form::text('idcode', null, ['placeholder'=>'ID Code', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
-			</div>
+				<div class="form-group" style="padding: 10px;">
+					{{ Form::text('Mobile', null, ['placeholder'=>'Mobile Number', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+				</div>
+				
+				<div class="form-group" style="padding: 10px;">
+					<label style="padding-left: 15px;">{!! Form::radio('room', 'Single bed', true, ['id'=>'1']) !!} Single bed</label>
+					<label style="padding-left: 15px;">{!! Form::radio('room', 'Twin bed', true, ['id'=>'2']) !!} Twin bed</label>
+					<label style="padding-left: 15px;">{!! Form::radio('room', 'Three beds', true, ['id'=>'3']) !!} Three beds</label>
+				</div>
 
-			<div class="form-group" style="padding: 10px;">
-				{{ Form::text('Mobile', null, ['placeholder'=>'Mobile Number', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
-			</div>
-			
-			<div class="form-group" style="padding: 10px;">
-				<label style="padding-left: 15px;">{!! Form::radio('room', 'Single bed', true, ['id'=>'1']) !!} Single bed</label>
-				<label style="padding-left: 15px;">{!! Form::radio('room', 'Twin bed', true, ['id'=>'2']) !!} Twin bed</label>
-				<label style="padding-left: 15px;">{!! Form::radio('room', 'Three beds', true, ['id'=>'3']) !!} Three beds</label>
-			</div>
 
-			<div class="form-group" style="padding: 10px">
-				{!! Form::submit('Reserv My Room', ['class'=>'form-control btn btn-success btn-block', 'style'=>'width: 200px; height: 50px']) !!}
-			</div>
 
-			{!! Form::close() !!}
+
+				<div id="more-form">
+					
+					<div class="form-group" style="padding: 10px;">
+						{{ Form::text('firstname', null, ['placeholder'=>'First Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+					</div>
+
+					<div class="form-group" style="padding: 10px;">
+						{{ Form::text('lastname', null, ['placeholder'=>'Last Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+					</div>
+
+					<div class="form-group" style="padding: 10px;">
+						{{ Form::text('idcode', null, ['placeholder'=>'ID Code', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+					</div>
+
+				</div>
+
+				
+
+				<div class="form-group" style="padding: 10px">
+					{!! Form::submit('Reserv My Room', ['class'=>'form-control btn btn-success btn-block', 'style'=>'width: 200px; height: 50px']) !!}
+				</div>
+
+				{!! Form::close() !!}
+			</div> {{-- end of div single-form --}}
+
 		</div>
 	</div>
 
