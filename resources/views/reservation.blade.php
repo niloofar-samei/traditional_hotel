@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="{{asset('dist/css/bootstrap.min.css')}}">
 	<title></title>
+	<script src="{{asset('dist/js/jquery-3.7.1.min.js')}}"></script>
+	<script src="{{asset('dist/js/popper.min.js')}}"></script>
+	<script src="{{asset('dist/js/bootstrap.min.js')}}"></script>
 
 	<style>
 		.dropbtn {
@@ -16,6 +19,14 @@
 			  cursor: pointer;
 			}
 	</style>
+<script>
+
+$(document).ready(function(){
+  $("h4").click(function(){
+    $("#hi").toggle();
+  });
+});
+</script>
 
 </head>
 <body>
@@ -39,13 +50,17 @@
 
 	</nav>
 
-
 	<div class="container text-center" style="margin-top: 50px">
 		<div style="margin: auto; width: 600px; background-image: linear-gradient(to right, #f46b45, #eea849); padding-top: 50px; padding-bottom: 20px; border-radius: 20px;">
 
 			<h3>Please reserve your room!</h3>
+			<h4>More Guests?</h4>
 
 			{!! Form::open(['route'=>'hotel.store', 'method'=>'post']) !!}
+
+			<div class="form-group" style="padding: 10px;">
+				{{ Form::text('othername', null, ['placeholder'=>'Other Name', 'id'=>'hi', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+			</div>
 
 			<div class="form-group" style="padding: 10px;">
 				{{ Form::text('firstname', null, ['placeholder'=>'First Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
@@ -77,9 +92,5 @@
 		</div>
 	</div>
 
-
-	<script src="{{asset('dist/js/jquery-3.7.1.min.js')}}"></script>
-	<script src="{{asset('dist/js/popper.min.js')}}"></script>
-	<script src="{{asset('dist/js/bootstrap.min.js')}}"></script>
 </body>
 </html>
