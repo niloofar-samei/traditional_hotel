@@ -21,11 +21,13 @@
 	</style>
 <script>
 
-$(document).ready(function(){
-  $("#q").click(function(){
-    $("#more-form").toggle();
+{{--
+$(document).ready(function() {
+  $('#q').click(function() {
+    $("#more-form").toggle(100);
   });
 });
+--}}
 </script>
 
 </head>
@@ -54,7 +56,7 @@ $(document).ready(function(){
 		<div style="margin: auto; width: 600px; background-image: linear-gradient(to right, #f46b45, #eea849); padding-top: 50px; padding-bottom: 20px; border-radius: 20px;">
 
 			<h3 style="border: 1px solid black">Please reserve your room!</h3>
-			<p id="q" style="border: 1px solid black">More Guests?</p>
+			{{-- <p id="q" style="border: 1px solid black">More Guests?</p> --}}
 
 			<div style="border: 1px solid green" id="single-form">
 				{!! Form::open(['route'=>'hotel.store', 'method'=>'post']) !!}
@@ -83,8 +85,8 @@ $(document).ready(function(){
 
 
 
-
-				<div id="more-form">
+				{{--
+				<div id="more-form" style="display: none;">
 					
 					<div class="form-group" style="padding: 10px;">
 						{{ Form::text('firstname', null, ['placeholder'=>'First Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
@@ -99,8 +101,9 @@ $(document).ready(function(){
 					</div>
 
 				</div>
+				--}}
 
-				
+
 
 				<div class="form-group" style="padding: 10px">
 					{!! Form::submit('Reserv My Room', ['class'=>'form-control btn btn-success btn-block', 'style'=>'width: 200px; height: 50px']) !!}
