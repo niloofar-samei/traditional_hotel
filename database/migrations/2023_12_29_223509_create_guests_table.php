@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('guests', function (Blueprint $table) {
             $table->id();
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('nationality');
+            $table->string('id_code');
+            $table->string('mobile');
+            $table->string('room_number');
+            $table->string('room_type');
             $table->timestamps();
         });
     }
