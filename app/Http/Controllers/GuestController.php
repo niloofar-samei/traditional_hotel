@@ -29,13 +29,13 @@ class GuestController extends Controller
     public function store(Request $request)
     {
         $new_guest = new Guest();
-        $new_guest->first_name = $request->first_name;
-        $new_guest->last_name = $request->last_name;
+        $new_guest->first_name  = $request->first_name;
+        $new_guest->last_name   = $request->last_name;
         $new_guest->nationality = $request->nationality;
-        $new_guest->id_code = $request->id_code;
-        $new_guest->mobile = $request->mobile;
+        $new_guest->id_code     = $request->id_code;
+        $new_guest->mobile      = $request->mobile;
         $new_guest->room_number = $request->room_number;
-        $new_guest->room_type = $request->room_type;
+        $new_guest->room_type   = $request->room_type;
         $new_guest->save()
     }
 
