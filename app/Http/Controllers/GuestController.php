@@ -36,7 +36,7 @@ class GuestController extends Controller
         $new_guest->mobile      = $request->mobile;
         $new_guest->room_number = $request->room_number;
         $new_guest->room_type   = $request->room_type;
-        $new_guest->save()
+        $new_guest->save();
     }
 
     /**
