@@ -68,6 +68,10 @@ $(document).ready(function() {
 				<div class="form-group" style="padding: 10px;">
 					{{ Form::text('lastname', null, ['placeholder'=>'Last Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
 				</div>
+				
+				<div class="form-group" style="padding: 10px;">
+					{{ Form::text('nationality', null, ['placeholder'=>'Nationality', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+				</div>
 
 				<div class="form-group" style="padding: 10px;">
 					{{ Form::text('idcode', null, ['placeholder'=>'ID Code', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
