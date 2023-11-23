@@ -84,6 +84,10 @@ $(document).ready(function() {
 				<div class="form-group" style="padding: 10px;">
 					{{ Form::text('room_number', null, ['placeholder'=>'Room Number', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
 				</div>
+
+				<div class="form-group" style="padding: 10px;">
+					{{ Form::text('room_type', null, ['placeholder'=>'Room Type', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+				</div>
 				
 				<div class="form-group" style="padding: 10px;">
 					<label style="padding-left: 15px;">{!! Form::radio('room', 'Single bed', true, ['id'=>'1']) !!} Single bed</label>
