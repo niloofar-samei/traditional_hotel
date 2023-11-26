@@ -62,11 +62,11 @@ $(document).ready(function() {
 				{!! Form::open(['route'=>'hotel.store', 'method'=>'post']) !!}
 
 				<div class="form-group" style="padding: 10px;">
-					{{ Form::text('firstname', null, ['placeholder'=>'First Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+					{{ Form::text('firs_tname', null, ['placeholder'=>'First Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
 				</div>
 
 				<div class="form-group" style="padding: 10px;">
-					{{ Form::text('lastname', null, ['placeholder'=>'Last Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+					{{ Form::text('last_name', null, ['placeholder'=>'Last Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
 				</div>
 
 				<div class="form-group" style="padding: 10px;">
@@ -74,7 +74,7 @@ $(document).ready(function() {
 				</div>
 
 				<div class="form-group" style="padding: 10px;">
-					{{ Form::text('idcode', null, ['placeholder'=>'ID Code', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+					{{ Form::text('id_code', null, ['placeholder'=>'ID Code', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
 				</div>
 
 				<div class="form-group" style="padding: 10px;">
