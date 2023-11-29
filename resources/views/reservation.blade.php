@@ -95,28 +95,6 @@ $(document).ready(function() {
 					<label style="padding-left: 15px;">{!! Form::radio('room', 'Three beds', true, ['id'=>'3']) !!} Three beds</label>
 				</div>
 
-
-
-				{{--
-				<div id="more-form" style="display: none;">
-					
-					<div class="form-group" style="padding: 10px;">
-						{{ Form::text('firstname', null, ['placeholder'=>'First Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
-					</div>
-
-					<div class="form-group" style="padding: 10px;">
-						{{ Form::text('lastname', null, ['placeholder'=>'Last Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
-					</div>
-
-					<div class="form-group" style="padding: 10px;">
-						{{ Form::text('idcode', null, ['placeholder'=>'ID Code', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
-					</div>
-
-				</div>
-				--}}
-
-
-
 				<div class="form-group" style="padding: 10px">
 					{!! Form::submit('Reserv My Room', ['class'=>'form-control btn btn-success btn-block', 'style'=>'width: 200px; height: 50px']) !!}
 				</div>
