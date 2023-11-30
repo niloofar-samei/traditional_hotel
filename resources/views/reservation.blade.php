@@ -52,6 +52,7 @@ $(document).ready(function() {
 
 	</nav>
 
+
 	<div class="container text-center" style="margin-top: 50px">
 		<div style="margin: auto; width: 600px; background-image: linear-gradient(to right, #f46b45, #eea849); padding-top: 50px; padding-bottom: 20px; border-radius: 20px;">
 
@@ -59,10 +60,10 @@ $(document).ready(function() {
 			{{-- <p id="q" style="border: 1px solid black">More Guests?</p> --}}
 
 			<div style="border: 1px solid green" id="single-form">
-				{!! Form::open(['route'=>'hotel.store', 'method'=>'post']) !!}
+				{!! Form::open(['route'=>'hotel.store', 'method'=>'POST']) !!}
 
 				<div class="form-group" style="padding: 10px;">
-					{{ Form::text('firs_tname', null, ['placeholder'=>'First Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+					{{ Form::text('first_name', null, ['placeholder'=>'First Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
 				</div>
 
 				<div class="form-group" style="padding: 10px;">
@@ -78,7 +79,7 @@ $(document).ready(function() {
 				</div>
 
 				<div class="form-group" style="padding: 10px;">
-					{{ Form::text('Mobile', null, ['placeholder'=>'Mobile Number', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+					{{ Form::text('mobile', null, ['placeholder'=>'Mobile Number', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
 				</div>
 
 				<div class="form-group" style="padding: 10px;">
