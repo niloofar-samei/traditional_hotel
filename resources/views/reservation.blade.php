@@ -52,6 +52,9 @@ $(document).ready(function() {
 
 	</nav>
 
+	@if($errors->any())
+		<h1>{{ $errors }}</h1>
+	@endif
 
 	<div class="container text-center" style="margin-top: 50px">
 		<div style="margin: auto; width: 600px; background-image: linear-gradient(to right, #f46b45, #eea849); padding-top: 50px; padding-bottom: 20px; border-radius: 20px;">

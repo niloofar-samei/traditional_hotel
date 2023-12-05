@@ -28,7 +28,12 @@ class GuestController extends Controller
      */
     public function store(Request $request)
     {
-        $new_guest = new Guest();
+        $this->validate($request, [
+            "first_name"=>"required",
+            "last_name"=>"required",
+        ]);
+
+        /*$new_guest = new Guest();
         $new_guest->first_name  = $request->first_name;
         $new_guest->last_name   = $request->last_name;
         $new_guest->nationality = $request->nationality;
@@ -36,7 +41,7 @@ class GuestController extends Controller
         $new_guest->mobile      = $request->mobile;
         $new_guest->room_number = $request->room_number;
         $new_guest->room_type   = $request->room_type;
-        $new_guest->save();
+        $new_guest->save();*/
     }
 
     /**
