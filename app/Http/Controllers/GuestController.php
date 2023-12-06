@@ -31,6 +31,8 @@ class GuestController extends Controller
         $this->validate($request, [
             "first_name"=>"required",
             "last_name"=>"required",
+            "nationality"=>"required",
+            "id_code"=>"id_code",
         ]);
 
         /*$new_guest = new Guest();
