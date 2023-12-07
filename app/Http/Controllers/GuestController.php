@@ -33,6 +33,9 @@ class GuestController extends Controller
             "last_name"=>"required",
             "nationality"=>"required",
             "id_code"=>"id_code",
+            "mobile"=>"mobile",
+            "room_number"=>"room_number",
+            "room_type"=>"room_type"
         ]);
 
         /*$new_guest = new Guest();
