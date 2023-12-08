@@ -53,7 +53,13 @@ $(document).ready(function() {
 	</nav>
 
 	@if($errors->any())
-		<h1>{{ $errors }}</h1>
+
+		@foreach($errors->all() as $item)
+
+			<h1>{{ $item }}</h1>
+		
+		@endforeach
+
 	@endif
 
 	<div class="container text-center" style="margin-top: 50px">
