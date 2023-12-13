@@ -52,11 +52,14 @@ $(document).ready(function() {
 
 	</nav>
 
+
 	@if($errors->any())
 
 		@foreach($errors->all() as $item)
 
-			<h1>{{ $item }}</h1>
+			<div class="alert alert-primary" role="alert">
+				{{ $item }}
+			</div>
 		
 		@endforeach
 
