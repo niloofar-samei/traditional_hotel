@@ -55,13 +55,15 @@ $(document).ready(function() {
 
 	@if($errors->any())
 
-		@foreach($errors->all() as $item)
+		<div class="alert alert-primary" role="alert">
 
-			<div class="alert alert-primary" role="alert">
-				{{ $item }}
-			</div>
+			@foreach($errors->all() as $item)
+
+				{{ $item }} <br>
 		
-		@endforeach
+			@endforeach
+
+		</div>
 
 	@endif
 
