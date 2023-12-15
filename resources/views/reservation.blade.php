@@ -53,21 +53,22 @@ $(document).ready(function() {
 	</nav>
 
 
-	@if($errors->any())
-
-		<div class="alert alert-primary" role="alert">
-
-			@foreach($errors->all() as $item)
-
-				{{ $item }} <br>
-		
-			@endforeach
-
-		</div>
-
-	@endif
-
 	<div class="container text-center" style="margin-top: 50px">
+
+		@if($errors->any())
+
+			<div class="alert alert-primary" role="alert" style="width: 600px; margin: auto">
+
+				@foreach($errors->all() as $item)
+
+					{{ $item }} <br>
+			
+				@endforeach
+
+			</div>
+
+		@endif
+
 		<div style="margin: auto; width: 600px; background-image: linear-gradient(to right, #f46b45, #eea849); padding-top: 50px; padding-bottom: 20px; border-radius: 20px;">
 
 			<h3 style="border: 1px solid black">Please reserve your room!</h3>
