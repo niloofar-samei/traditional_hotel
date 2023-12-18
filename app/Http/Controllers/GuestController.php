@@ -28,15 +28,6 @@ class GuestController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            "first_name"    => "required",
-            "last_name"     => "required",
-            "nationality"   => "required",
-            "id_code"       => "required",
-            "mobile"        => "required",
-            "room_number"   => "required",
-            "room_type"     => "required"
-        ]);
 
         /*$new_guest = new Guest();
         $new_guest->first_name  = $request->first_name;
