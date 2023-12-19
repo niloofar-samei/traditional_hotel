@@ -26,10 +26,9 @@ class GuestController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(reservationRequest $request)
     {
-
-        /*$new_guest = new Guest();
+        $new_guest = new Guest();
         $new_guest->first_name  = $request->first_name;
         $new_guest->last_name   = $request->last_name;
         $new_guest->nationality = $request->nationality;
@@ -37,7 +36,7 @@ class GuestController extends Controller
         $new_guest->mobile      = $request->mobile;
         $new_guest->room_number = $request->room_number;
         $new_guest->room_type   = $request->room_type;
-        $new_guest->save();*/
+        $new_guest->save();
     }
 
     /**
