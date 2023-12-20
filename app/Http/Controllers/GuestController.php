@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Guest;
 use Illuminate\Http\Request;
+use App\Http\Requests\reservationRequest;
 
 class GuestController extends Controller
 {

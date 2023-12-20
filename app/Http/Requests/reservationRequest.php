@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Request;
 
-class reservationRequest extends FormRequest
+class reservationRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
