@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Guest;
 use Illuminate\Http\Request;
 use App\Http\Requests\reservationRequest;
+use Illuminate\Support\Facades\Session;
 
 class GuestController extends Controller
 {
@@ -13,7 +14,8 @@ class GuestController extends Controller
      */
     public function index()
     {
-        return view('index');
+        return Session::all();
+        /*return view('index');*/
     }
 
     /**
@@ -38,6 +40,8 @@ class GuestController extends Controller
         $new_guest->room_number = $request->room_number;
         $new_guest->room_type   = $request->room_type;
         $new_guest->save();
+        Session::put(["message"=>"good"]);
+        return Session::all();
     }
 
     /**
