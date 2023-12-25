@@ -40,7 +40,7 @@ class GuestController extends Controller
         $new_guest->room_number = $request->room_number;
         $new_guest->room_type   = $request->room_type;
         $new_guest->save();
-        Session::put(["message"=>"good"]);
+        Session::put(["message"=>"Record was successful."]);
         return Session::all();
     }
 
