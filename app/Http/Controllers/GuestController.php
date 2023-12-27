@@ -41,7 +41,6 @@ class GuestController extends Controller
         $new_guest->room_type   = $request->room_type;
         $new_guest->save();
         Session::put(["message"=>"Record was successful."]);
-        return Session::all();
     }
 
     /**
@@ -78,5 +77,9 @@ class GuestController extends Controller
 
     public function reservation() {
         return view('reservation');
+    }
+
+    public function success() {
+        return view('success');
     }
 }
