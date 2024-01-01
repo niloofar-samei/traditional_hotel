@@ -14,8 +14,7 @@ class GuestController extends Controller
      */
     public function index()
     {
-        return Session::all();
-        /*return view('index');*/
+        return view('index');
     }
 
     /**
@@ -40,7 +39,6 @@ class GuestController extends Controller
         $new_guest->room_number = $request->room_number;
         $new_guest->room_type   = $request->room_type;
         $new_guest->save();
-        Session::put(["message"=>"Record was successful."]);
     }
 
     /**
