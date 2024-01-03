@@ -26,8 +26,8 @@ class reservationRequest extends FormRequest
             "first_name"    => "required",
             "last_name"     => "required",
             "nationality"   => "required",
-            "id_code"       => "required",
-            "mobile"        => "required",
+            "id_code"       => "required|unique:guests",
+            "mobile"        => "required|unique:guests",
             "room_number"   => "required",
             "room_type"     => "required"
         ];

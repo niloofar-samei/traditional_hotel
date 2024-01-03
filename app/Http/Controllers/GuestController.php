@@ -14,8 +14,7 @@ class GuestController extends Controller
      */
     public function index()
     {
-        return Session::all();
-        /*return view('index');*/
+        return view('index');
     }
 
     /**
