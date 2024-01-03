@@ -70,12 +70,15 @@ $(document).ready(function() {
 		@endif
 
 
-	@if(Session::has('status'))
-		<div>{{ Session::get('status') }}</div>
-	@endif
+		@if(Session::has('status'))
 
+			<div class="alert alert-success" role="alert" style="width: 600px; margin: auto; margin-bottom: 20px;">
 
-		
+				{{ Session::get('status') }}
+			</div>
+
+		@endif
+
 
 		<div style="margin: auto; width: 600px; background-image: linear-gradient(to right, #f46b45, #eea849); padding-top: 50px; padding-bottom: 20px; border-radius: 20px;">
 
