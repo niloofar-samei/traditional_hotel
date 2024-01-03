@@ -14,7 +14,8 @@ class GuestController extends Controller
      */
     public function index()
     {
-        return view('index');
+        return Session::all();
+        /*return view('index');*/
     }
 
     /**
@@ -39,6 +40,7 @@ class GuestController extends Controller
         $new_guest->room_number = $request->room_number;
         $new_guest->room_type   = $request->room_type;
         $new_guest->save();
+        return redirect('/success')->with('status', 'success!');
     }
 
     /**

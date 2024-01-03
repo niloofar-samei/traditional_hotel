@@ -7,8 +7,8 @@
 </head>
 <body>
 
-	@if(Session::has('message'))
-		<div>{{ Session::get('message') }}</div>
+	@if(Session::has('status'))
+		<div>{{ Session::get('status') }}</div>
 	@endif
 
 </body>
