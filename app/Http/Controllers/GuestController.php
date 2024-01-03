@@ -79,7 +79,4 @@ class GuestController extends Controller
         return view('reservation');
     }
 
-    public function success() {
-        return view('success');
-    }
 }
