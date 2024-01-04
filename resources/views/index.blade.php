@@ -14,7 +14,7 @@
 					<div class="w-100"></div>
 				@endif
 		
-				<div class="col" style="width: 25px; height: 35px; background: {{$room->status == 1 ? 'green' : 'red'}};  border: 1px solid red; text-align: center; margin: 5px; padding-top: 2px">
+				<div class="col" style="width: 25px; height: 35px; background: {{$room->status == 1 ? '#99ff99' : '#ff704d'}}; text-align: center; margin: 5px; padding-top: 2px">
 				
 					{{ $room->room_number }}
 				
