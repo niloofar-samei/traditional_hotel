@@ -3,7 +3,7 @@
 @section('content')
 
 	<div style="border: 1px solid black; margin: auto; width: auto; margin-top: 200px">
-		{!! Form::open(['route' => 'hotel.store', 'method' => 'post']) !!}
+		{!! Form::open(['route' => 'guest.store', 'method' => 'post']) !!}
 
 			{{ Form::text('search', null, ['placeholder'=>'Search for room availability', 'style'=>'width: 315px; height: 47px; padding-left: 10px; ']) }}
 

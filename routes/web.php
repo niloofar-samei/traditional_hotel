@@ -17,7 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/hotel', 'App\Http\Controllers\GuestController');
+Route::resource('/hotel', 'App\Http\Controllers\RoomController');
+Route::resource('/guest', 'App\Http\Controllers\GuestController');
 
 Route::get('/reservation', 'App\Http\Controllers\GuestController@reservation');
 Route::get('/success', 'App\Http\Controllers\GuestController@success');
