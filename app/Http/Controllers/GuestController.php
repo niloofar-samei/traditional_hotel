@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Guest;
+use App\Models\Room;
 use Illuminate\Http\Request;
 use App\Http\Requests\reservationRequest;
 use Illuminate\Support\Facades\Session;
@@ -75,7 +76,8 @@ class GuestController extends Controller
     }
 
     public function reservation() {
-        return view('reservation');
+        $available_rooms = Room::where('status', '=', '1')->get();
+        return view('reservation', compact('available_rooms'));
     }
 
 }
