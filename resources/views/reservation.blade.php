@@ -52,6 +52,10 @@ $(document).ready(function() {
 
 	</nav>
 
+	@if(Session::has('room_number'))
+		<a href="">your dashbord</a>
+	@endif
+
 
 	<div class="container text-center" style="margin-top: 50px">
 
