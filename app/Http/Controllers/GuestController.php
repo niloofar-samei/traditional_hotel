@@ -40,7 +40,8 @@ class GuestController extends Controller
         $new_guest->room_number = $request->room_number;
         $new_guest->room_type   = $request->room_type;
         $new_guest->save();
-        return redirect('/reservation')->with('status', 'Your room is reserved!');
+        Session::flash('status', 'Your room is reserved!');
+        return redirect('/reservation');
     }
 
     /**
