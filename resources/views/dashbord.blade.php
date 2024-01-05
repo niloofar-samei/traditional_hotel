@@ -7,5 +7,8 @@
 </head>
 <body>
 	<p>welcome to your dashbord.</p>
+
+	{{ $new_guest }}
+
 </body>
 </html>

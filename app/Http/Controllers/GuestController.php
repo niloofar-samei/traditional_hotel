@@ -81,7 +81,8 @@ class GuestController extends Controller
     }
 
     public function dashbord() {
-        return view('/dashbord');
+        $new_guest = Guest::all()->last();
+        return view('/dashbord', compact('new_guest'));
     }
 
 }
