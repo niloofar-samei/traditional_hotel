@@ -40,7 +40,6 @@ class GuestController extends Controller
         $new_guest->room_number = $request->room_number;
         $new_guest->room_type   = $request->room_type;
         $new_guest->save();
-        Session::put(["room_number"=>$request->room_number]);
         return redirect('/reservation')->with('status', 'Your room is reserved!');
     }
 
@@ -79,6 +78,10 @@ class GuestController extends Controller
     public function reservation() {
         $available_rooms = Room::where('status', '=', '1')->get();
         return view('reservation', compact('available_rooms'));
+    }
+
+    public function dashbord() {
+        return view('/dashbord');
     }
 
 }
