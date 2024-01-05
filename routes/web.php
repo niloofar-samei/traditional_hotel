@@ -23,3 +23,4 @@ Route::resource('/guest', 'App\Http\Controllers\GuestController');
 Route::get('/reservation', 'App\Http\Controllers\GuestController@reservation');
 Route::get('/dashbord', 'App\Http\Controllers\GuestController@dashbord');
 
+

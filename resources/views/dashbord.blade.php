@@ -48,6 +48,7 @@
 
 		<table class="table table-hover table-dark">
 			<tr>
+				<td>update</td>
 				<td>id</td>
 				<td>name</td>
 				<td>family</td>
@@ -60,6 +61,7 @@
 				<td>updated at</td>
 			</tr>
 			<tr>
+				<td><a href="{{url('guest/'.$new_guest->id.'/edit')}}">update</a></td>
 				<td>{{ $new_guest->id }}</td>
 				<td>{{ $new_guest->first_name }}</td>
 				<td>{{ $new_guest->last_name }}</td>
