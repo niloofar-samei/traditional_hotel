@@ -6,6 +6,7 @@ use App\Models\Guest;
 use App\Models\Room;
 use Illuminate\Http\Request;
 use App\Http\Requests\reservationRequest;
+use App\Http\Requests\updateReservationRequest;
 use Illuminate\Support\Facades\Session;
 
 class GuestController extends Controller
@@ -63,7 +64,7 @@ class GuestController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Guest $guest)
+    public function update(updateReservationRequest $request, Guest $guest)
     {
         $guest->first_name  = $request->first_name;
         $guest->last_name   = $request->last_name;
