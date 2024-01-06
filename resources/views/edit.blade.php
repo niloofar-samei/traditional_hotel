@@ -58,11 +58,11 @@
 		@endif
 
 
-		@if(Session::has('status'))
+		@if(Session::has('update'))
 
 			<div class="alert alert-success" role="alert" style="width: 600px; margin: auto; margin-bottom: 20px;">
 
-				{{ Session::get('status') }}
+				{{ Session::get('update') }}
 			</div>
 
 		@endif

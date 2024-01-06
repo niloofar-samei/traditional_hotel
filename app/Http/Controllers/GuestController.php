@@ -65,7 +65,14 @@ class GuestController extends Controller
      */
     public function update(Request $request, Guest $guest)
     {
-        //
+        $guest->first_name  = $request->first_name;
+        $guest->last_name   = $request->last_name;
+        $guest->nationality = $request->nationality;
+        $guest->id_code     = $request->id_code;
+        $guest->mobile      = $request->mobile;
+        $guest->save();
+        Session::flash('update', 'Your information is updated.');
+        return redirect('/dashbord');
     }
 
     /**
