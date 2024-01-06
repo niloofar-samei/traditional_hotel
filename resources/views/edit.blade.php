@@ -57,16 +57,6 @@
 
 		@endif
 
-
-		@if(Session::has('update'))
-
-			<div class="alert alert-success" role="alert" style="width: 600px; margin: auto; margin-bottom: 20px;">
-
-				{{ Session::get('update') }}
-			</div>
-
-		@endif
-
 		<div style="margin: auto; width: 600px; background-image: linear-gradient(to right, #f46b45, #eea849); padding-top: 50px; padding-bottom: 20px; border-radius: 20px;">
 
 			<h3 style="border: 1px solid black">Edit your information here:</h3>
