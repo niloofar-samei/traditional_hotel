@@ -73,7 +73,7 @@
 			{{-- <p id="q" style="border: 1px solid black">More Guests?</p> --}}
 
 			<div style="border: 1px solid green" id="single-form">
-				{!! Form::open(['route'=>'guest.store', 'method'=>'POST']) !!}
+				{!! Form::Model($guest,['route'=>['guest.update',$guest->id], 'method'=>'PUT']) !!}
 
 				<div class="form-group" style="padding: 10px;">
 					{{ Form::text('first_name', null, ['placeholder'=>'First Name', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
