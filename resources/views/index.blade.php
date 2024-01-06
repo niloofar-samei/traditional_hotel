@@ -8,7 +8,7 @@
 		
 		<div class="row">
 		
-			@foreach($available_rooms as $room)
+			@foreach($all_rooms as $room)
 
 				@if($room->id == 11 || $room->id == 21)
 					<div class="w-100"></div>

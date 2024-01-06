@@ -12,8 +12,8 @@ class RoomController extends Controller
      */
     public function index()
     {
-        $available_rooms = Room::all();
-        return view('index', compact('available_rooms'));
+        $all_rooms = Room::all();
+        return view('index', compact('all_rooms'));
     }
 
     /**
