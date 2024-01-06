@@ -2,19 +2,7 @@
 
 @section('content')
 
-	@if($errors->any())
-
-		<div class="alert alert-warning" role="alert" style="width: 600px; margin: auto; margin-bottom: 20px;">
-
-			@foreach($errors->all() as $item)
-
-				{{ $item }} <br>
-		
-			@endforeach
-
-		</div>
-
-	@endif
+	@include('partials.error')
 
 	{{-- update reservation form --}}
 	<div style="margin: auto; width: 600px; background-image: linear-gradient(to right, #f46b45, #eea849); padding-top: 50px; padding-bottom: 20px; border-radius: 20px;">
