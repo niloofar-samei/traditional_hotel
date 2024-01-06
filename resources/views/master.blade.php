@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="{{asset('dist/css/bootstrap.min.css')}}">
 	<title>Traditional Hotel</title>
+
+	<script src="{{asset('dist/js/jquery-3.7.1.min.js')}}"></script>
+	<script src="{{asset('dist/js/popper.min.js')}}"></script>
+	<script src="{{asset('dist/js/bootstrap.min.js')}}"></script>
 </head>
 <body style="background-image: url({{asset('dist/img/index.jpg')}}); background-size: 100% auto;">
 
@@ -27,10 +31,12 @@
 
 	</nav>
 
-	@yield('content')
+	{{-- container --}}
+	<div class="container text-center" style="margin-top: 50px">
+	
+		@yield('content')
 
-	<script src="{{asset('dist/js/jquery-3.7.1.min.js')}}"></script>
-	<script src="{{asset('dist/js/popper.min.js')}}"></script>
-	<script src="{{asset('dist/js/bootstrap.min.js')}}"></script>
+	</div>
+
 </body>
 </html>
