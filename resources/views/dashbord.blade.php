@@ -7,6 +7,7 @@
 	{{-- guest information table --}}
 	<table class="table table-hover table-dark">
 		<tr>
+			<td>delete</td>
 			<td>update</td>
 			<td>id</td>
 			<td>name</td>
@@ -20,6 +21,13 @@
 			<td>updated at</td>
 		</tr>
 		<tr>
+			<td>
+				{!! Form::open(['route'=>['guest.destroy', $new_guest->id], 'method'=>'delete']) !!}
+
+					{!! Form::submit('delete') !!}
+
+				{!! Form::close() !!}
+			</td>
 			<td><a href="{{url('guest/'.$new_guest->id.'/edit')}}">update</a></td>
 			<td>{{ $new_guest->id }}</td>
 			<td>{{ $new_guest->first_name }}</td>

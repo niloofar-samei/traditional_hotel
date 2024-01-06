@@ -81,7 +81,8 @@ class GuestController extends Controller
      */
     public function destroy(Guest $guest)
     {
-        //
+        Guest::destroy($guest->id);
+        return redirect('/hotel');
     }
 
     public function reservation() {
