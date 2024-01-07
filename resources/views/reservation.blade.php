@@ -15,12 +15,6 @@
 
 	@endif
 
-	<i>Available rooms:</i>
-	@foreach($available_rooms as $room)
-		<b>{{ $room->room_number }}, </b>
-	@endforeach
-
-
 	{{-- reservation form --}}
 	<div style="margin: auto; width: 600px; background-image: linear-gradient(to right, #f46b45, #eea849); padding-top: 50px; padding-bottom: 20px; border-radius: 20px; box-shadow: 0px 0px 30px 5px black;">
 

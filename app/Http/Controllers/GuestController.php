@@ -87,8 +87,7 @@ class GuestController extends Controller
 
     public function reservation($room_number) {
         $selected_room = $room_number;
-        $available_rooms = Room::where('status', '=', '1')->get();
-        return view('reservation', compact('available_rooms', 'selected_room'));
+        return view('reservation', compact('selected_room'));
     }
 
     public function dashbord() {
