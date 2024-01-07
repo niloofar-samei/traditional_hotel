@@ -35,11 +35,21 @@
 			@endif
 			
 			<div class="col" style="width: 10px; height: 40px; border: 1px solid black; background: {{$room->status == 1 ? '#99ff99' : '#ff704d'}};">
-				<a href="{{url('/reservation/'.$room->room_number)}}" style="text-decoration: none; color: black">
 
-					<b>{{ $room->room_number }}</b>
+				@if($room->status == 0)
+
+					<a href="{{url('/reservation/'.$room->room_number)}}" style="text-decoration: none; color: black">
+
+						<b>{{ $room->room_number }}</b>
 				
-				</a>
+					</a>
+
+				@elseif($room->status == 1)
+
+					<b>{{ $room->room_number}}</b>
+
+				@endif
+				
 			</div>
 
 		@endforeach
