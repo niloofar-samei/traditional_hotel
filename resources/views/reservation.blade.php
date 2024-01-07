@@ -49,9 +49,9 @@
 			</div>
 			
 			<div class="form-group" style="padding: 10px; margin-left: -14px;">
-				<label style="padding-left: 15px;">{!! Form::radio('room_type', 'Single_bed', true, ['id'=>'1']) !!} Single bed</label>
-				<label style="padding-left: 15px;">{!! Form::radio('room_type', 'Twin_bed', true, ['id'=>'2']) !!} Twin bed</label>
-				<label style="padding-left: 15px;">{!! Form::radio('room_type', 'Three_beds', true, ['id'=>'3']) !!} Three beds</label>
+				<label style="padding-left: 15px;">{!! Form::radio('room_type', 'Single_bed', true) !!} Single bed</label>
+				<label style="padding-left: 15px;">{!! Form::radio('room_type', 'Twin_bed') !!} Twin bed</label>
+				<label style="padding-left: 15px;">{!! Form::radio('room_type', 'Three_beds') !!} Three beds</label>
 			</div>
 
 			<div class="form-group" style="padding: 10px">
