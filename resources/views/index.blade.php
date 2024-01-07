@@ -2,14 +2,21 @@
 
 @section('content')
 
-	<div class="row" style="border: 1px solid black; margin: auto; width: 700px; margin-top: 200px; background-color: rgba(255, 255, 255, 0.4); padding: 20px;">
+	<div class="row" style="border: 1px solid black; margin: auto; width: 700px; margin-top: 200px; background-color: rgba(255, 255, 255, 0.8); padding: 20px;">
 
 		<h4>Traditional hotel's current status of rooms availability:</h4>
 
 		<div style="text-align: left; margin-bottom: 30px">
-			<i style="color: #99ff99">Availabale</i>
-			<br>
-			<i style="color: #ff704d">Occupied</i>
+
+			<ul>
+				<li style="color:#99ff99; list-style-type: square; font-size:20px;">
+					<i style="color: black; font-size:1em;">Available</i>
+				</li>
+				<li style="color:#ff704d; list-style-type: square; font-size:20px">
+					<i style="color: black">Occupied</i>
+				</li>
+			</ul>
+
 		</div>
 		
 		@foreach($all_rooms as $room)

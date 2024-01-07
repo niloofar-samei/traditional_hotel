@@ -9,6 +9,7 @@
 	<script src="{{asset('dist/js/jquery-3.7.1.min.js')}}"></script>
 	<script src="{{asset('dist/js/popper.min.js')}}"></script>
 	<script src="{{asset('dist/js/bootstrap.min.js')}}"></script>
+
 </head>
 <body style="background-image: url({{asset('dist/img/index.jpg')}}); background-size: 100% auto;">
 
