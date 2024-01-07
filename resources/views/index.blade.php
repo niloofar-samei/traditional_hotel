@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<div class="row" style="border: 1px solid black; margin: auto; width: 700px; margin-top: 200px; background: white; padding: 20px;">		
+	<div class="row" style="border: 1px solid black; margin: auto; width: 700px; margin-top: 200px; background-color: rgba(255, 255, 255, 0.4); padding: 20px;">
 		
 		@foreach($all_rooms as $room)
 
@@ -23,3 +23,4 @@
 	</div>
 	
 @endsection
+
