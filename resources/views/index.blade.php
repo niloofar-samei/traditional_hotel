@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<div class="row" style="border: 1px solid black; margin: auto; width: 700px; margin-top: 200px; background-color: rgba(255, 255, 255, 0.8); padding: 20px;">
+	<div class="row" style="border: 1px solid black; margin: auto; width: 700px; margin-top: 150px; background-color: rgba(255, 255, 255, 0.8); padding: 20px; box-shadow: 0px 0px 30px 5px black;">
 
 		<h4>Traditional hotel's current status of rooms availability:</h4>
 
@@ -23,7 +23,14 @@
 
 			@if($room->id == 1 | $room->id == 11 || $room->id == 21)
 
-				<i class="row" style="border: 1px solid green">{{ $room->room_type}}</i>
+				<i class="row" style="font-size: 18px; padding-top: 5px; padding-bottom: 5px">
+
+					<?php
+						$a = explode('_', $room->room_type);
+						echo "$a[0] $a[1]";
+					?>
+				
+				</i>
 
 			@endif
 			
