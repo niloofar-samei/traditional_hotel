@@ -34,11 +34,13 @@
 
 			@endif
 			
-				<div class="col" style="width: 10px; height: 40px; border: 1px solid black; background: {{$room->status == 1 ? '#99ff99' : '#ff704d'}};">
-			
+			<div class="col" style="width: 10px; height: 40px; border: 1px solid black; background: {{$room->status == 1 ? '#99ff99' : '#ff704d'}};">
+				<a href="{{url('/reservation/'.$room->room_number)}}" style="text-decoration: none;">
+
 					<b>{{ $room->room_number }}</b>
-			
-				</div>
+				
+				</a>
+			</div>
 
 		@endforeach
 
