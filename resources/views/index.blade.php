@@ -2,27 +2,23 @@
 
 @section('content')
 
-	<div style="border: 1px solid black; margin: auto; width: 500px; margin-top: 200px">
+	<div class="row" style="border: 1px solid black; margin: auto; width: 700px; margin-top: 200px; background: white; padding: 20px;">		
+		
+		@foreach($all_rooms as $room)
 
-		<i>Available rooms:</i>
-		
-		<div class="row">
-		
-			@foreach($all_rooms as $room)
+			@if($room->id == 1 | $room->id == 11 || $room->id == 21)
 
-				@if($room->id == 11 || $room->id == 21)
-					<div class="w-100"></div>
-				@endif
-		
-				<div class="col" style="width: 25px; height: 35px; background: {{$room->status == 1 ? '#99ff99' : '#ff704d'}}; text-align: center; margin: 5px; padding-top: 2px">
-				
-					{{ $room->room_number }}
-				
+				<i class="row" style="border: 1px solid green">{{ $room->room_type}}</i>
+
+			@endif
+			
+				<div class="col" style="width: 10px; height: 40px; border: 1px solid black; background: {{$room->status == 1 ? '#99ff99' : '#ff704d'}};">
+			
+					<b>{{ $room->room_number }}</b>
+			
 				</div>
-		
-			@endforeach
-		
-		</div>
+
+		@endforeach
 
 	</div>
 	
