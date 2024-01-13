@@ -38,11 +38,17 @@ class GuestController extends Controller
         $new_guest->nationality = $request->nationality;
         $new_guest->id_code     = $request->id_code;
         $new_guest->mobile      = $request->mobile;
-        $new_guest->room_number = $request->room_number;
+
+        if ($request->room_number == 2) {
+            return back()->withErrors('Selected room is occupied. Please select an available room.');
+        }else{
+            $new_guest->room_number = $request->room_number;
+        }
+
         $new_guest->room_type   = $request->room_type;
         $new_guest->save();
         Session::flash('status', 'Your room is reserved!');
-        return redirect('/reservation');
+        return redirect('/reservation/.$request->room_number');
     }
 
     /**
