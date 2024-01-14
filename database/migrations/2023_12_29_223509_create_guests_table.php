@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('mobile')->unique();
             $table->string('room_number');
             $table->string('room_type');
+            $table->unsignedBigInteger('hotel_room');
+            $table->foreign('hotel_room')->refrences('room_number')->on('rooms')->onDelete('cascade');
             $table->timestamps();
         });
     }
