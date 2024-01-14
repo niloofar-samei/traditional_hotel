@@ -39,18 +39,20 @@ class GuestController extends Controller
         $new_guest->id_code     = $request->id_code;
         $new_guest->mobile      = $request->mobile;
 
-        $selected_room = Room::where('room_number', '=', $request->room_number)->get();
+        $check_selected_room = Room::where('room_number', '=', $request->room_number)->get();
         
-        if ($selected_room[0]->status == '0') {
+        if ($check_selected_room[0]->status == '0') {
             return back()->withErrors('Selected room is occupied. Please select an available room.');
         }else{
-            $new_guest->room_number = $request->room_number;
+          $new_guest->room_number = $request->room_number;
+          $selected_room = $request->room_number;
         }
 
         $new_guest->room_type   = $request->room_type;
         $new_guest->save();
+
         Session::flash('status', 'Your room is reserved!');
-        return redirect('/reservation/.$request->room_number');
+        return redirect()->route('reservation', $selected_room);
     }
 
     /**

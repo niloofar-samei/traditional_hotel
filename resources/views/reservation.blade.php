@@ -45,7 +45,7 @@
 			</div>
 
 			<div class="form-group" style="padding: 10px;">
-				{{ Form::text('room_number', $selected_room, ['placeholder'=>'Room Number', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+				{{ Form::text('room_number',$selected_room ,['placeholder'=>'Room Number', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
 			</div>
 			
 			<div class="form-group" style="padding: 10px; margin-left: -14px;">

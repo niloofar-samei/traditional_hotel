@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::resource('/hotel', 'App\Http\Controllers\RoomController');
 Route::resource('/guest', 'App\Http\Controllers\GuestController');
 
-Route::get('/reservation/{room_number}', 'App\Http\Controllers\GuestController@reservation');
+Route::get('/reservation/{room_number}', 'App\Http\Controllers\GuestController@reservation')->name('reservation');
 Route::get('/dashbord', 'App\Http\Controllers\GuestController@dashbord');
 
 
