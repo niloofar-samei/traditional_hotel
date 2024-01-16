@@ -25,7 +25,7 @@
 	  <div class="collapse navbar-collapse" id="navbarNav" style="padding-left: 50px;">
 	    <ul class="navbar-nav">
 	      <li class="nav-item">
-	        <a class="nav-link" href="{{url('/reservation')}}">RESERVATION</a>
+	        <a class="nav-link" href="{{url('/reservation')}}">{{ date('Y-m-d H:i:s') }}</a>
 	      </li>
 	    </ul>
 	  </div>
