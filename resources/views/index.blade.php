@@ -21,7 +21,7 @@
 		
 		@foreach($all_rooms as $room)
 
-			@if($room->id == 1 | $room->id == 11 || $room->id == 21)
+			@if($room->id == 1 | $room->id == 6 || $room->id == 11)
 
 				<i class="row" style="font-size: 18px; padding-top: 5px; padding-bottom: 5px">
 
@@ -36,17 +36,17 @@
 			
 			<div class="col" style="width: 10px; height: 40px; border: 1px solid black; background: {{$room->status == 1 ? '#99ff99' : 'repeating-linear-gradient(-55deg, #222, #222 5px, #333 5px, #333 10px)'}};">
 
-				@if($room->status == 1)
+				@if($room->status == 0)
 
-					<a href="{{url('/reservation/'.$room->room_number)}}" style="text-decoration: none; color: black">
+					<a href="{{url('/reservation/'.$room->id)}}" style="text-decoration: none; color: black">
 
-						<b>{{ $room->room_number }}</b>
+						<b>{{ $room->id }}</b>
 				
 					</a>
 
-				@elseif($room->status == 0)
+				@elseif($room->status == 1)
 
-					<b style="color:black">{{ $room->room_number}}</b>
+					<b style="color:black">{{ $room->id}}</b>
 
 				@endif
 
