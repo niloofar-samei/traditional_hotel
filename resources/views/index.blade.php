@@ -36,7 +36,7 @@
 			
 			<div class="col" style="width: 10px; height: 40px; border: 1px solid black; background: {{$room->status == 1 ? '#99ff99' : 'repeating-linear-gradient(-55deg, #222, #222 5px, #333 5px, #333 10px)'}};">
 
-				@if($room->status == 0)
+				@if($room->status == 1)
 
 					<a href="{{url('/reservation/'.$room->id)}}" style="text-decoration: none; color: black">
 
@@ -44,7 +44,7 @@
 				
 					</a>
 
-				@elseif($room->status == 1)
+				@elseif($room->status == 0)
 
 					<b style="color:black">{{ $room->id}}</b>
 
