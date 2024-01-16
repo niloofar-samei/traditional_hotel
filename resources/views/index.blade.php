@@ -12,7 +12,7 @@
 				<li style="color:#99ff99; list-style-type: square; font-size:20px;">
 					<i style="color: black; font-size:1em;">Available</i>
 				</li>
-				<li style="color:#ff704d; list-style-type: square; font-size:20px">
+				<li style="color:black; list-style-type: square; font-size:20px">
 					<i style="color: black">Occupied</i>
 				</li>
 			</ul>
