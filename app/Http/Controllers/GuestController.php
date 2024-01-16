@@ -39,7 +39,7 @@ class GuestController extends Controller
         $new_guest->id_code     = $request->id_code;
         $new_guest->mobile      = $request->mobile;
 
-        $check_selected_room = Room::where('room_number', '=', $request->room_number)->get();
+        $check_selected_room = Room::where('id', '=', $request->room_number)->get();
         
         if ($check_selected_room[0]->status == '0') {
             return back()->withErrors('Selected room is occupied. Please select an available room.');
