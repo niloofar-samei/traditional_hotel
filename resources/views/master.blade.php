@@ -10,6 +10,20 @@
 	<script src="{{asset('dist/js/popper.min.js')}}"></script>
 	<script src="{{asset('dist/js/bootstrap.min.js')}}"></script>
 
+	<script>
+		jQuery(document).ready(function() {
+    		var foo = jQuery('#foo');
+  
+    		function updateTime() {
+        		var now =  new Date();
+        		foo.val(now.toUTCString());    
+    		}
+  
+    		updateTime();
+    		setInterval(updateTime, 1000);
+		});
+	</script>
+
 </head>
 <body style="background-image: url({{asset('dist/img/index.jpg')}}); background-size: 100% auto;">
 
@@ -22,13 +36,17 @@
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
 
-	  <div class="collapse navbar-collapse" id="navbarNav" style="padding-left: 50px;">
+	  <div class="collapse navbar-collapse" id="navbarNav" style="padding-left: 50px; border: 1px solid red;">
 	    <ul class="navbar-nav">
 	      <li class="nav-item">
-	        <a class="nav-link" href="{{url('/reservation')}}">{{ date('Y-m-d H:i:s') }}</a>
+	        <a class="nav-link" href="{{url('/reservation')}}">RESERVATION</a>
 	      </li>
 	    </ul>
 	  </div>
+
+	  	<div>
+      		<input id="foo" name="foo" type="text" value="" size="25" style="border: none; background-color: transparent; color: black">
+      	</div>
 
 	</nav>
 
