@@ -18,9 +18,7 @@ return new class extends Migration
             $table->string('nationality');
             $table->string('id_code')->unique();
             $table->string('mobile')->unique();
-            $table->unsignedBigInteger('room_number');
-            $table->foreign('room_number')->references('id')->on('rooms')->onDelete('cascade');
-            $table->string('room_type');
+            $table->string('room_number');
             $table->timestamps();
         });
     }
