@@ -20,17 +20,17 @@ class RoomTableSeeder extends Seeder
                 \App\Models\Room::create([
                     "room_type" => "single_bed",
                     //if($i == 4){"single_bed"}elseif($i == 9){"twin_bed"}else{"third_bed"},
-                    "status"    =>  0]);
+                    "status"    =>  1]);
             }elseif($i < 20) {
                 \App\Models\Room::create([
                     "room_type" => "twin_bed",
                     //if($i == 4){"single_bed"}elseif($i == 9){"twin_bed"}else{"third_bed"},
-                    "status"    =>  0]);
+                    "status"    =>  1]);
             }else{
                 \App\Models\Room::create([
                     "room_type" => "third_bed",
                     //if($i == 4){"single_bed"}elseif($i == 9){"twin_bed"}else{"third_bed"},
-                    "status"    =>  0]);
+                    "status"    =>  1]);
             }
         }   
     }
