@@ -4,4 +4,4 @@
 
 	<i>hi</i>
 
-@endscetion
+@endsection
