@@ -105,8 +105,4 @@ class GuestController extends Controller
         return view('/dashbord', compact('new_guest'));
     }
 
-    public function admin() {
-        return view('admin.admin');
-    }
-
 }
