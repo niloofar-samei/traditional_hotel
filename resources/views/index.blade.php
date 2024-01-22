@@ -21,7 +21,7 @@
 		
 		@foreach($all_rooms as $room)
 
-			@if($room->id == 1 | $room->id == 6 || $room->id == 11)
+			@if($room->id == 11 | $room->id == 21 || $room->id == 31)
 
 				<i class="row" style="font-size: 18px; padding-top: 5px; padding-bottom: 5px">
 
