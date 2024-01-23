@@ -10,6 +10,6 @@ class Room extends Model
     use HasFactory;
 
     public function new_guests() {
-        return $this->hasMany(Guest::class);
+        return $this->belongsToMany(Guest::class);
     }
 }
