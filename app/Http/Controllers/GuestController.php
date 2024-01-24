@@ -48,8 +48,18 @@ class GuestController extends Controller
           $selected_room = $request->room_number;
         }
 
-        $new_guest->room_type   = $request->room_type;
         $new_guest->save();
+
+        $new_guest->room()->attach($selected_room);
+
+        $room = Room::where('id', '=', $selected_room)->first();
+        $room->status = 0;
+        $room->save();
+
+        //Room::find($room_number)->new_guests()->attach(1);
+
+        //$a = Room::find(10);
+        //$a->new_guests()->attach(1);
 
         Session::flash('status', 'Your room is reserved!');
         return redirect()->route('reservation', $selected_room);
