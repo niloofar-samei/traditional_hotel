@@ -10,6 +10,6 @@ class Guest extends Model
     use HasFactory;
 
     public function room() {
-        return $this->bolongsToMany(Room::class);
+        return $this->belongsToMany(Room::class);
     }
 }
