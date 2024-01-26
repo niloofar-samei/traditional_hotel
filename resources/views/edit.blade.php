@@ -38,7 +38,7 @@
 			</div>
 
 			<div class="form-group" style="padding: 10px">
-				{!! Form::submit('Reserv My Room', ['class'=>'form-control btn btn-success btn-block', 'style'=>'width: 200px; height: 50px']) !!}
+				{!! Form::submit('Update my information', ['class'=>'form-control btn btn-success btn-block', 'style'=>'width: 200px; height: 50px']) !!}
 			</div>
 
 			{!! Form::close() !!}
