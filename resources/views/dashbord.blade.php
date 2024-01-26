@@ -37,10 +37,13 @@
 			<td>{{ $new_guest->mobile }}</td>
 			<td>{{ $new_guest->room_number}}</td>
 			<td>
+				hi
+				{{--
 				<?php
 					$a = explode('_', $new_guest->room_type);
 					echo "$a[0] $a[1]";
 				?>
+				--}}
 			</td>
 			<td>{{ $new_guest->created_at }}</td>
 			<td>{{ $new_guest->updated_at }}</td>
