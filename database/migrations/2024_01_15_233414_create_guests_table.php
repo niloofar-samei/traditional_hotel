@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nationality');
             $table->string('id_code')->unique();
             $table->string('mobile')->unique();
+            $table->string('email')->unique();
             $table->string('room_number');
             $table->timestamps();
         });
