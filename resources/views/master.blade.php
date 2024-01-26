@@ -10,6 +10,8 @@
 	<script src="{{asset('dist/js/popper.min.js')}}"></script>
 	<script src="{{asset('dist/js/bootstrap.min.js')}}"></script>
 
+
+	<!--
 	<script>
 		jQuery(document).ready(function() {
     		var foo = jQuery('#foo');
@@ -23,6 +25,7 @@
     		setInterval(updateTime, 1000);
 		});
 	</script>
+	-->
 
 </head>
 <body style="background-image: url({{asset('dist/img/index.jpg')}}); background-size: 100% auto;">
@@ -44,9 +47,11 @@
 	    </ul>
 	  </div>
 
+	  	<!--
 	  	<div>
       		<input id="foo" name="foo" type="text" value="" size="25" style="border: none; background-color: transparent; color: black">
       	</div>
+		-->
 
 	</nav>
 
