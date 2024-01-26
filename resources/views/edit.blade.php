@@ -33,6 +33,10 @@
 				{{ Form::text('mobile', null, ['placeholder'=>'Mobile Number', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
 			</div>
 
+			<div class="form-group" style="padding: 10px;">
+				{{ Form::text('email', null, ['placeholder'=>'Email', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
+			</div>
+
 			<div class="form-group" style="padding: 10px">
 				{!! Form::submit('Reserv My Room', ['class'=>'form-control btn btn-success btn-block', 'style'=>'width: 200px; height: 50px']) !!}
 			</div>
