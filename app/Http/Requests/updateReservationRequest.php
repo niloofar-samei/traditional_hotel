@@ -27,7 +27,8 @@ class updateReservationRequest extends FormRequest
             "last_name"     => "required",
             "nationality"   => "required",
             "id_code"       => "required",
-            "mobile"        => "required"
+            "mobile"        => "required",
+            "email"         => "required"
         ];
     }
 }
