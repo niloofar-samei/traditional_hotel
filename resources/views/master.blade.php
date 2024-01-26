@@ -40,7 +40,7 @@
 
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="{{url('/reservation')}}">RESERVATION</a>
+					<!-- <a class="nav-link" href="{{url('/reservation')}}">RESERVATION</a> -->
 				</li>
 			</ul>
 
