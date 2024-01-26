@@ -48,11 +48,13 @@
 				{{ Form::text('room_number',$selected_room ,['placeholder'=>'Room Number', 'style'=>'width: 315px; height: 47px; padding-left: 10px;']) }}
 			</div>
 			
+			<!--
 			<div class="form-group" style="padding: 10px; margin-left: -14px;">
 				<label style="padding-left: 15px;">{!! Form::radio('room_type', 'Single_bed', true) !!} Single bed</label>
 				<label style="padding-left: 15px;">{!! Form::radio('room_type', 'Twin_bed') !!} Twin bed</label>
 				<label style="padding-left: 15px;">{!! Form::radio('room_type', 'Three_beds') !!} Three beds</label>
 			</div>
+			-->
 
 			<div class="form-group" style="padding: 10px">
 				{!! Form::submit('Reserv My Room', ['class'=>'form-control btn btn-success btn-block', 'style'=>'width: 200px; height: 50px']) !!}
