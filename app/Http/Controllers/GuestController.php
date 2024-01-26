@@ -38,7 +38,8 @@ class GuestController extends Controller
         $new_guest->nationality = $request->nationality;
         $new_guest->id_code     = $request->id_code;
         $new_guest->mobile      = $request->mobile;
-
+        $new_guest->email       = $request->email;
+        
         $check_selected_room = Room::where('id', '=', $request->room_number)->get();
         
         if ($check_selected_room[0]->status == '0') {
