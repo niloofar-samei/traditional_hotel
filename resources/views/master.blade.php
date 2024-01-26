@@ -3,12 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="{{asset('dist/css/bootstrap.min.css')}}">
 	<title>Traditional Hotel</title>
 
-	<script src="{{asset('dist/js/jquery-3.7.1.min.js')}}"></script>
-	<script src="{{asset('dist/js/popper.min.js')}}"></script>
-	<script src="{{asset('dist/js/bootstrap.min.js')}}"></script>
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
 
 	<!--
@@ -64,30 +61,33 @@
 						</li>
 					@endif
 				@else
-					<li class="nav-item dropdown">
-						<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-							{{ Auth::user()->name }}
-						</a>
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
 
-						<div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="{{ route('logout') }}"
-							   onclick="event.preventDefault();
-							   document.getElementById('logout-form').submit();">
-								{{ __('Logout') }}
-							</a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
 
-							{!! Form::open(['route'=>'logout', 'method'=>'POSST']) !!}
-								{!! Form::submit('logout') !!}
-							{!! Form::close() !!}
-	
-						</div>
-					</li>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
 				@endguest
 
 			</ul>
 
 		</div>
 
+<!-- 								{!! Form::open(['route'=>'logout', 'method'=>'POST']) !!}
+									{!! Form::submit('logout') !!}
+								{!! Form::close() !!}
+ -->
 		<!--
 		<div>
 			<input id="foo" name="foo" type="text" value="" size="25" style="border: none; background-color: transparent; color: black">
